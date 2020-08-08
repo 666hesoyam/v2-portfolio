@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'ObjectSans-HeavySlanted';
+  src: url('ObjectSans-HeavySlanted.eot');
+  src: url('ObjectSans-HeavySlanted.eot?#iefix') format('embedded-opentype'),
+       url('ObjectSans-HeavySlanted.svg#ObjectSans-HeavySlanted') format('svg'),
+       url('ObjectSans-HeavySlanted.ttf') format('truetype'),
+       url('ObjectSans-HeavySlanted.woff') format('woff'),
+       url('ObjectSans-HeavySlanted.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ObjectSans-Regular';
+  src: url('ObjectSans-Regular.eot');
+  src: url('ObjectSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('ObjectSans-Regular.svg#ObjectSans-Regular') format('svg'),
+       url('ObjectSans-Regular.ttf') format('truetype'),
+       url('ObjectSans-Regular.woff') format('woff'),
+       url('ObjectSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
