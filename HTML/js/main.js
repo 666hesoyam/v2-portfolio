@@ -12,8 +12,8 @@ var $page = $('html, body');
 // Our Projects Section Slider
 $(document).ready(function(){
     $('.slider').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         slidesToShow: 2,
         rows: 2,
         prevArrow: "<img src='img/left-arrow.svg' class='prev' alt='prev'>",
@@ -33,8 +33,8 @@ $(document).ready(function(){
 // Our Projects Section Slider
 $(document).ready(function(){
     $('.slider-two').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         slidesToShow: 2,
         rows: 2,
         prevArrow: "<img src='img/left-arrow.svg' class='prev' alt='prev'>",
