@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(270deg);
   position: absolute;
   top: 49vh;
-  left: -47vh; }
+  left: -54vh; }
   .vertical-title__text {
     display: flex;
     flex-wrap: no-wrap;
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.07em;
     text-transform: lowercase; }
     .vertical-title__text p {
-      width: 7vh; }
+      width: 16vh; }
   .vertical-title__text--large p {
     width: 19.5vh; }
 
@@ -214,14 +214,15 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-align: right;
   color: transparent;
-  -webkit-text-stroke: 2px #AC24FF;
+  -webkit-text-stroke: 3px #AC24FF;
   -webkit-text-fill-color: transparent; }
 
 .heading__websites--three, .heading__animations--three, .heading__banners--three, .heading__landing--three {
   opacity: .7;
   z-index: 8;
   top: 0.8vh;
-  right: -0.9vh; }
+  right: -0.9vh;
+  -webkit-text-stroke: 2px #AC24FF; }
 
 .heading__websites:hover ~ .heading__websites--three, .heading__animations:hover ~ .heading__animations--three, .heading__banners:hover ~ .heading__banners--three, .heading__landing:hover ~ .heading__landing--three {
   display: block; }
@@ -230,7 +231,8 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .4;
   z-index: 7;
   top: 1.2vh;
-  right: -1.2vh; }
+  right: -1.2vh;
+  -webkit-text-stroke: 2px #AC24FF; }
 
 .heading__websites:hover ~ .heading__websites--four, .heading__animations:hover ~ .heading__animations--four, .heading__banners:hover ~ .heading__banners--four, .heading__landing:hover ~ .heading__landing--four {
   display: block; }
@@ -239,7 +241,12 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .2;
   z-index: 6;
   top: 1.6vh;
-  right: -1.5vh; }
+  right: -1.5vh;
+  -webkit-text-stroke: 2px #AC24FF; }
+
+.heading__websites--five {
+  top: 1.5vh;
+  right: -1.4vh; }
 
 .heading__websites:hover ~ .heading__websites--five, .heading__animations:hover ~ .heading__animations--five, .heading__banners:hover ~ .heading__banners--five, .heading__landing:hover ~ .heading__landing--five {
   display: block; }
@@ -308,7 +315,8 @@ h1, h2, h3, h4, h5, h6 {
 .slider, .slider-two {
   position: relative; }
   .slider__item, .slider-two__item {
-    margin: 1.5vh 1vh;
+    margin-bottom: 3vh;
+    margin-right: 3vh;
     width: 51.0185vh !important;
     height: 27.4074vh !important;
     display: inline-flex !important;
@@ -323,6 +331,14 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     max-width: 100%;
     height: auto; }
+
+.slider__item {
+  background-color: transparent; }
+
+.slider__img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
 
 .slick-initialized .slick-slide {
   text-align: center; }
@@ -354,6 +370,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: start;
   position: relative; }
 
+.about .vertical-title {
+  left: -47vh; }
+
 .about__heading {
   font-weight: 900;
   font-size: 13.7vh;
@@ -372,7 +391,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4vh;
     line-height: 3.7vh; }
   .about__info__sub-title {
-    color: #AC24FF; }
+    color: #AC24FF;
+    opacity: .8;
+    font-size: 1.7vh; }
 
 .about__photo {
   position: absolute;
@@ -402,37 +423,70 @@ h1, h2, h3, h4, h5, h6 {
   top: 40vh;
   right: 36vh;
   width: 12.7778vh;
-  height: 11.2037vh; }
+  height: 11.2037vh;
+  animation-name: neon-line-two;
+  animation-duration: 4s; }
 
 .neon-line__item--three {
   top: 51vh;
   right: 16vh;
   width: 9.3519vh;
-  height: 10.463vh; }
+  height: 10.463vh;
+  animation-name: neon-line-three;
+  animation-duration: 4s; }
 
 .neon-line__item--four {
   top: 66vh;
   right: 20vh;
   width: 17.7778vh;
-  height: 15.2778vh; }
+  height: 15.2778vh;
+  animation-name: neon-line-four; }
 
 @keyframes neon-line {
   from {
     transform: translate(0, 0px); }
   65% {
-    transform: translate(0, 15px); }
+    transform: translate(-5px, 15px); }
   to {
     transform: translate(0, 0px); } }
 
+@keyframes neon-line-two {
+  from {
+    transform: translate(0, 0px); }
+  65% {
+    transform: translate(-5px, 20px); }
+  to {
+    transform: translate(0, 0px); } }
+
+@keyframes neon-line-three {
+  from {
+    transform: translate(0, 0px); }
+  65% {
+    transform: translate(10px, 20px); }
+  to {
+    transform: translate(0px, 0px); } }
+
+@keyframes neon-line-four {
+  from {
+    transform: translate(0, 0px); }
+  65% {
+    transform: translate(10px, 15px); }
+  to {
+    transform: translate(0px, 0px); } }
+
 .experience {
-  background: url("../img/portfolio-bg-compress.jpg"); }
-  .experience .vertical-title__text--black {
-    color: #000;
-    opacity: .7; }
+  background: url("../img/portfolio-bg-compress.jpg");
+  position: relative; }
+  .experience .vertical-title {
+    left: -57vh; }
+    .experience .vertical-title .vertical-title__text--extra-large {
+      color: #000;
+      opacity: .7; }
+      .experience .vertical-title .vertical-title__text--extra-large p {
+        width: 23.5vh; }
   .experience__container {
     padding: 0;
-    justify-content: start;
-    position: relative; }
+    justify-content: start; }
   .experience__heading {
     font-weight: 900;
     font-size: 13.7vh;
@@ -451,3 +505,62 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 3.7vh; }
     .experience__info a {
       color: #AC24FF; }
+  .experience__btn {
+    width: 20.463vh;
+    height: 4.4444vh;
+    border: 3px solid #AC24FF;
+    margin-top: 4.1667vh; }
+    .experience__btn a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; }
+    .experience__btn:hover {
+      background-color: #AC24FF; }
+    .experience__btn:hover a {
+      color: #fff; }
+
+.experience__project {
+  max-width: 85%;
+  margin-left: 13vh;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-between; }
+  .experience__project .project {
+    z-index: 2; }
+    .experience__project .project__num h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 12.6852vh;
+      line-height: 15.463vh;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 3px #AC24FF; }
+    .experience__project .project__title h2 {
+      font-family: 'ObjectSans-HeavySlanted';
+      font-style: italic;
+      font-weight: 802;
+      font-size: 1.8519vh;
+      line-height: 1.9444vh;
+      text-transform: uppercase;
+      color: rgba(20, 19, 18, 0.1); }
+
+.parallax__wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .parallax__wrap .parallax {
+    position: absolute; }
+  .parallax__wrap #scene {
+    z-index: 100;
+    top: 13vh;
+    right: 6vh; }
+  .parallax__wrap #crowd-first {
+    z-index: 200;
+    top: 32vh;
+    right: 3vh; }
+  .parallax__wrap #crowd-second {
+    z-index: 300;
+    top: 44vh;
+    right: 14vh; }
