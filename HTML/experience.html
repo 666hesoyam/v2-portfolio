@@ -16,7 +16,6 @@
         <link href="assets/fonts/font.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&subset=cyrillic" rel="stylesheet">
         <!-- PAGE LEVEL PLUGIN STYLES -->
-        <link href="css/animate.css" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
         <!-- THEME STYLES -->
         <link href="css/main.min.css" rel="stylesheet" type="text/css"/>
@@ -29,10 +28,10 @@
         <!--========== PAGE LAYOUT ==========-->
 
         <main class="main">
-            <aside class="aside">
+            <aside class="aside aside--white">
                 <div class="aside__container">
                     <div class="aside__title">
-                        <a href="index.html">
+                        <a href="index.html" class="title__wrap">
                             <h2 class="title__name title__name--white">Anton</h2>
                             <h2 class="title__name title__name--white">Shaposhnikov</h2>
                         </a>
@@ -62,6 +61,11 @@
                             <a href="https://www.linkedin.com/in/-188107197/" target="_blank">
                                 <img class="socials__icon" src="../HTML/img/linkedin.svg" alt="linkedin">
                             </a>
+
+                            <div class="socials__lang">
+                                <a class="lang__ru" href="in-dev.html">ru</a>
+                                <a class="lang__eng" href="index.html">/eng</a>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -80,7 +84,7 @@
 
                 <div class="experience__container">
                     <div class="parallax__wrap">
-                        <div id="scene" class='parallax' data-speed="-3">
+                        <div id="scene" class='parallax' data-speed="-1">
                             <img src="img/neon-trigon_1.png">
                         </div>
 
@@ -96,9 +100,9 @@
                     <h1 class="experience__heading">experience</h1>
 
                     <div class="experience__info">
-                        <p>For over 5 years I have been in the IT field. For the last year and a half - I have been developing websites.</p>
-                        <p>I also have experience of working in a large team, experience of interacting with a tester and a designer.</p>
-                        <p>Understanding and applying in practice the basics of manual testing.</p>
+                        <p>I have been in the IT field for over 5 years. For the last year and a half, I have been developing websites.</p>
+                        <p>I also have experience working in a large team, the experience of interacting with a tester, and a designer,</p>
+                        <p>understanding and applying in practice the basics of manual testing.</p>
                         <p>Here you can see my current <a href="https://rabota.ua/cv/16200987" target="_blank">resume</a></p>
                         <p>Here you can see the previous version of my <a href="https://666hesoyam.github.io/portfolio/" target="_blank">portfolio for 2019</a></p>
                         <p>If you are interested in working with me, I suggest discussing the details in personal correspondence or by phone.</p>
@@ -145,40 +149,9 @@
 
         <!--========== \END PAGE LAYOUT ==========-->
 
-
         <!-- ADD JQUERY HERE -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
         <!-- PAGE LEVEL SCRIPTS -->
-        <script src="js/main.js" type="text/javascript"></script>
-        <script>
-            $(document).ready(function(){
-                var elem = $('.parallax__wrap'),         //    Контейнер, в котором будем проводить анимацию
-                    pos = elem.offset(),            //    Позиция элемента
-                    elem_left = pos.left,           //    Слева
-                    elem_top = pos.top,             //    Сверху
-                    elem_width = elem.width(),      //    Ширина элемента
-                    elem_height = elem.height(),    //    Высота элемента
-                    x_center,    //    Координаты центра по оси X
-                    y_center;    //    Координаты центра по оси Y
-                //    Обрабатываем событие перемещения курсора мыши
-                $('.parallax__wrap').mousemove(function(e){    
-                //    Определяем центр элемента (формула легко гуглится)
-                    x_center = ( elem_width / 2 ) - ( e.pageX - elem_left );
-                    y_center = ( elem_height / 2 ) - ( e.pageY - elem_top );
-                //    Проходим по всем блокам с изображениями)
-                    $('.parallax').each(function(){
-                    var speed = $(this).attr('data-speed'),     //    Определяем скорость 
-                        xPos = Math.round(-1*x_center/20*speed),//    Высчитываем позицию по оси X, движения будут инвертированы (-1). Формула подбиралась на глаз
-                        yPos = Math.round(y_center/20*speed);   //    Высчитываем позицию по оси Y
-                //    Перемещение по оси Y делаем до определенной точки, потом перемещение останавливаем
-                    if (yPos < 0)
-                        yPos = -2*speed;
-                //    Непосредственно перенос      
-                    $(this).css('transform', 'translate3d('+xPos+'px, '+yPos+'px, 0px)');
-                        });
-                    });
-                });
-        </script>
+        <script src="js/parallax.js" type="text/javascript"></script>
     </body>
 </html>
