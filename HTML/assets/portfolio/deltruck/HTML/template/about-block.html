@@ -1,0 +1,147 @@
+<div class="container">
+	<div class="about">
+		<div class="news">
+			<div class="about__heading">
+				<h2><a href="news.html">Новини</a></h2>
+			</div>
+
+			<div class="news-block">
+				<a href="action.html">
+					<div class="news-block__item">
+						<div class="date-wrap">
+							<div class="point"></div>
+							<time>31.07.2020</time>
+						</div>
+						<h3 class="title">Акція: Делтрак дарує подарунки за відправку палет за трьома маршрутами</h3>
+					</div>
+				</a>
+
+				<a href="news.html">
+					<div class="news-block__item">
+						<div class="date-wrap">
+							<div class="point"></div>
+							<time>20.07.2020</time>
+						</div>
+						<h3 class="title">DelТruck запускає графік відправок послуги «Online-замовлення палетомісць в авто»</h3>
+					</div>
+				</a>
+
+				<a href="action.html">
+					<div class="news-block__item">
+						<div class="date-wrap">
+							<div class="point"></div>
+							<time>10.04.2020</time>
+						</div>
+						<h3 class="title">Акція: Перевезення у DelTruck замовляй - подарунки вигравай</h3>
+					</div>
+				</a>
+
+				<a href="news.html">
+					<div class="news-block__item">
+						<div class="date-wrap">
+							<div class="point"></div>
+							<time>28.01.2020</time>
+						</div>
+						<h3 class="title">DELTRUCK оновив маршрути послуги «ONLINE-ЗАМОВЛЕННЯ ПАЛЕТОМІСЦЬ В АВТО»</h3>
+					</div>
+				</a>
+
+				<a href="action.html">
+					<div class="news-block__item">
+						<div class="date-wrap">
+							<div class="point"></div>
+							<time>08.02.2019</time>
+						</div>
+						<h3 class="title">Акція «Зафрахтуємо - Довеземо. Реєстратор надаємо!»</h3>
+					</div>
+				</a>
+
+				<a href="news.html">
+					<div class="news-block__btn">
+						<p>Всі новини</p> 
+						<img src="img/icon/arrow.png" alt="">
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="advantages">
+			<div class="about__heading">
+				<h2>Переваги</h2>
+			</div>
+
+			<div class="advantages-block">
+				<div class="advantages-block__item">
+					<div class="img-wrap">
+						<img src="img/icon/truck_icon.png" alt="">
+					</div>
+					<h3 class="title">Великий парк автомобілів</h3>
+				</div>
+
+				<div class="advantages-block__item">
+					<div class="img-wrap">
+						<img src="img/icon/time_truck_icon.png" alt="">
+					</div>
+					<h3 class="title">Подача автомобіля в максимально стислі терміни</h3>
+				</div>
+
+				<div class="advantages-block__item">
+					<div class="img-wrap">
+						<img src="img/icon/document_icon.png" alt="">
+					</div>
+					<h3 class="title">Оптимальна вартість перевезення</h3>
+				</div>
+
+				<div class="advantages-block__item">
+					<div class="img-wrap">
+						<img src="img/icon/track_icon.png" alt="">
+					</div>
+					<h3 class="title">Автоматичний контроль перевезення</h3>
+				</div>
+
+				<div class="advantages-block__item">
+					<div class="img-wrap">
+						<img src="img/icon/umbrella_icon.png" alt="">
+					</div>
+					<h3 class="title">Індивідуальне страхування</h3>
+				</div>
+			</div>
+		</div>
+		
+		<div class="feedback">
+			<div class="about__heading">
+				<h2>Зворотній зв’язок</h2>
+			</div>
+
+			<div class="feedback-block">
+				<div class="feedback-block__item">
+					<form class="feedback-form">
+						<label class="feedback-form__label">Ваше ім’я</label>
+						<input class="feedback-form__input" type="text" placeholder=" ">
+					</form>
+
+					<form class="feedback-form">
+						<label class="feedback-form__label">Номер на який ми зателефонуємо</label>
+						<input class="feedback-form__input" type="tel" placeholder="+380" minlength="10" maxlength="13">
+					</form>
+
+					<button class="feedback-form__btn" onclick='throw_message_order(" "); return false;'>Надіслати</button>
+					<!-- POP UP Order-->
+					<script>
+						function throw_message_order(str) {
+							$("#order__box").fadeIn(500).delay(6000).fadeOut(500);
+						}
+					</script>
+					<div id='order__box'>
+						<div id='box_text'>
+							<img src="img/icon/pop-up__icon.png" alt="">
+							<p>Ваша заявка успішно відправлена!</p>
+							<p>Менеджер DelTruck зв’яжется з Вами <br> в найближчий час.</p>
+						</div>
+					</div>
+					<!-- \POP UP -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

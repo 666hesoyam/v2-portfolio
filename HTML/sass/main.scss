@@ -119,11 +119,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .aside__title {
-	.title__wrap:hover {
-		text-shadow: #AC24FF 1px 0 0.9259vh;
+	.title__wrap {
+		transition: text-shadow 0.4s ease;
+		&:hover {
+			transition: text-shadow 0.4s ease;
+			text-shadow: #AC24FF 1px 0 0.9259vh;
+		}
 	}
-	.title__wrap--purp:hover {
-		text-shadow: #AC24FF 1px 0 0.9259vh;
+	.title__wrap--purp {
+		transition: text-shadow 0.4s ease;
+		&:hover {
+			transition: text-shadow 0.4s ease;
+			text-shadow: #AC24FF 1px 0 0.9259vh;
+		}
 	}
 	.title__name {
 		font-family: 'ObjectSans-HeavySlanted';
@@ -156,8 +164,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     height: 77%;
     overflow: hidden;
-	// background: url(../img/my-main-photo.png) no-repeat right bottom;
-	// background-size: contain;
 	&--without-photo {
 		background: none;
 	}
@@ -168,13 +174,16 @@ h1, h2, h3, h4, h5, h6 {
 		line-height: 7vh;
 		margin-top: 4.4vh;
 		color: #fff;
+		transition: all 0.4s ease;
 		&:hover {
 			color: #AC24FF;
 			text-shadow: #AC24FF 1px 0 0.9259vh;
+			transition: all 0.4s ease;
 		}
 	}
 	.nav__link--purple {
 		color: #AC24FF;
+		transition: all 0.4s ease;
 		text-shadow: #AC24FF 1px 0 0.9259vh;
 	}
 }
@@ -192,9 +201,11 @@ h1, h2, h3, h4, h5, h6 {
 	.socials__icon {
 		width: 5vh;
 		height: 5vh;
+		transition: all 0.3s ease;
 		&:hover {
 			cursor: pointer;
 			transform: scale(1.1);
+			transition: all 0.3s ease;
 		}
 	}
 	.socials__lang {
@@ -216,22 +227,21 @@ h1, h2, h3, h4, h5, h6 {
 			font-size: 1.8889vh;
 			line-height: 3.4259vh;
 			text-transform: lowercase;
-			
-		}
-		.lang__ru {
-			text-shadow: #fff 1px 0 1.8519vh;
+			transition: all 0.2s ease;
 			&:hover {
 				transform: scale(1.1);
 				text-shadow: #AC24FF 1px 0 1.8519vh;
+				transition: all 0.2s ease;
 			}
+		}
+		.lang__ru {
+			text-shadow: #fff 1px 0 1.8519vh;
 		}
 		.lang__eng {
 			color: #AC24FF;
 			text-shadow: #AC24FF 1px 0 1.8519vh;
 			&:hover {
 				color: #AC24FF;
-				transform: scale(1.1);
-				text-shadow: #AC24FF 1px 0 1.8519vh;
 			}
 		}
 	}
@@ -733,12 +743,14 @@ h1, h2, h3, h4, h5, h6 {
 		height: 4.4444vh;
 		border: 0.2778vh solid #AC24FF;
 		margin-top: 4.1667vh;
+		transition: all .5s linear;
 		a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
 			height: 100%;
+			transition: all .5s linear;
 		}
 		&:hover {
 			border: 3px solid #fff;
